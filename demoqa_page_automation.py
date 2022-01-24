@@ -26,14 +26,13 @@ driver.find_element_by_xpath("//h5[text()='Elements']").click()
 time.sleep(3)
 print('Clicked on Elements button on DemoQA Tools box')
 
-# driver.find_element_by_class_name("//div[@class = 'header-text']").click()
 # time.sleep(4)
 # print("clicked Elements button ")
 
 
-#driver.find_element_by_class_name("//span[@class = 'text']").click()
-time.sleep(1)
-print('clicked on text box in Elements drop down')
+# driver.find_element_by_class_name("//span[@class = 'text']").click()
+# time.sleep(1)
+# print('clicked on text box in Elements drop down')
 
 driver.find_element_by_xpath("//span[text()='Text Box']").click()
 time.sleep(3)
@@ -62,9 +61,52 @@ time.sleep(3)
 print('submitted the text form successfully')
 time.sleep(2)
 
+driver.find_element_by_class_name("//span[@class='pr-1']/preceding::div[10]").click()
+time.sleep(2)
+print('*'*90)
+
+driver.find_element_by_xpath("//div[@class='element-group']/following::div[3]").click()
+time.sleep(2)
+print('selected Forms')
+
+
+driver.find_element_by_xpath("//div[@class='element-list collapse show']/descendant::span").click()
+time.sleep(2)
+print('selected practice Form')
+
+driver.find_element_by_id("firstName").send_keys('Upendra')
+time.sleep(2)
+print('entered first-name successfully into form')
+
+driver.find_element_by_id("lastName").send_keys('Kotipalli')
+time.sleep(2)
+print('entered last-name successfully into form')
+
+driver.find_element_by_xpath("//input[@id='userEmail']").send_keys('jai.baalaiyah@gmail.com')
+time.sleep(2)
+print('entered gmail successfully into form')
+
+
+radio_button = driver.find_element_by_xpath("//label[text()='Male']").click()
+radio_button.is_selected()
+time.sleep(2)
+print("Gender Radio button is clicked")
+
+driver.find_element_by_xpath("//input[@id='userNumber']").send_keys('9704400123')
+time.sleep(2)
+print("Mobile Number entered")
+
+
+
+driver.close()
+
+#   <span class="text">Text Box</span>
+#//div[@class = 'header-text']/following-sibling::div
+
+'''
 driver.find_element_by_xpath("//span[text() = 'Buttons']").click()
 time.sleep(2)
-print('selected Buttons practice page')
+print('selected Buttons practice ')
 
 driver.find_elements_by_css_selector("#doubleClickBtn").click()
 time.sleep(2)
@@ -79,7 +121,4 @@ print('clicked right-click button')
 driver.find_elements_by_css_selector("#w6U9P").click()
 time.sleep(2)
 print('clicked click button')
-
-driver.close()
-
-#   <span class="text">Text Box</span>
+'''
